@@ -1,1 +1,5 @@
-Flask
+Resource objects can be deleted using the oc delete command from the command line. You can delete a single resource object by name, or delete a set of resource objects by specifying a label selector.
+
+When an application is deployed, resource objects for that application will typically have an app label applied to them with value corresponding to the name of the application. This can be used with the label selector to delete all resource objects for an application.
+
+To test what resource objects would be deleted when using a label selector, use the oc get command to query the set of objects which would be matched.
